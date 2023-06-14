@@ -11,21 +11,31 @@
       height: 360px;
       width: 100%;
       object-fit: cover;
+      margin-bottom: 16px;
     }
   </style>
 </head>
 <body>
+  {% include 'nav.html' %}
+  <img class="img-fluid" id="banner" src="static/Banner.jpeg">
   <div class="container">
   <h1 class="text-center mt-4 mb-2"> {{company_name}} Careers</h1>
-  <img class="img-fluid" id="banner" src="static/Banner.jpeg">
-  <h2 class="text-center">About Jovian</h2>
+  <div class="row" style="margin-bottom: 16px">
+   <div class="col-md-6">
+    
   <p class="lead">Jovian.ml is a tooling and workflows built platform specifically for data science. This is built for people who want to manage data science projects like experts. They can do so by following best practices, staying organized and by never losing an experiment again. It's a collaboration hub for everyone: researchers, ML engineers, developers and all other stakeholders. Jovian integrates seamlessly with the user's favorite tools and libraries. User can focus on modeling and Jovian will take care of the rest. Users can make the most of Jovian's features by:
     
 1. Capturing everything: Code, libraries, datasets, outputs, hyperparameters, metrics and model checkpoints: all tracked in one place.
     
 2. Analyzing experiments: A flexible comparison dashboard lets you sort, filter, archive and do much more to analyze ML experiments & results.
     
-3. Reproducing anywhere: Project dependencies are captured & containerized automatically, so you can reproduce easily on any platform.</p>
+3. Reproducing anywhere: Project dependencies are captured & containerized automatically, so you can reproduce easily on any platform.
+  </p>
+   </div>
+    <div class="d-none d-md-block col-md-6">
+    <img src= "static/people.jpeg" style="height:420px; border-radius:4px;" >
+    </div>
+  </div>
     
   <h2 class="text-center mt-2 mb-4">Job Openings</h2>
 
@@ -37,8 +47,8 @@
   
   <div class="text-center">
     <button class="btn btn-primary btn-lg"> Contact  Us </button>
-    <p class="mt-4">Copywright 2022, Jovian</p>
   </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 </html>
